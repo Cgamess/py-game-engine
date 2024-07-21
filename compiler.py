@@ -18,7 +18,7 @@ https://github.com/Cgamess/ut-game-engine
 """ 
 if 0: print(licence) # assigned it to a var and put it in a print statement to keep it in the code after compilation
 import os
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = r"ut-game-engine: https://github.com/Cgamess/ut-game-engine"+"\n"+licence
+os.environ[r'PYGAME_HIDE_SUPPORT_PROMPTr'] = r"ut-game-engine: https://github.com/Cgamess/ut-game-engine"+"\n"+licence
 import pygame
 from OpenGL.GL import *
 from OpenGL.GL.shaders import compileProgram, compileShader
@@ -27,4 +27,6 @@ import numpy as np
 import time
 import json
 from ntypes.ntypes import open_file_dialog
-import pyinstaller
+import subprocess
+command=[r'.\pyinstaller.exe', r'--noconfirm', r'--onefile', r'--windowed', r'--name', r'"stuff"', r'--optimize', r'"2"', r'--add-data', r'"./myflag.png;."', r'--add-data', r'"./LICENSE.txt;."', r'--add-binary', r'"./binarys/opengl/SDL2.dll;."', r'--add-binary', r'"./binarys/basepython/python.exe;."', r'--add-binary', r'"./binarys/basepython/python3.dll;."', r'--add-binary', r'"./binarys/basepython/python312.dll;."',  r'"./runner.py"r']
+subprocess.run(command)
