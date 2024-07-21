@@ -27,4 +27,4 @@ import numpy as np
 import time
 import json
 from ntypes.ntypes import open_file_dialog
-import auto-py-to-exe, pyinstaller
+import pyinstaller
