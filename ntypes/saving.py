@@ -9,10 +9,10 @@ import os
 import zipfile
 import cryptography as cpty
 import gzip
-import modding
+import modding as modding
 
-moddedsave=r".\saves\modsave.json"
-unmoddedsave=r".\saves\save.json"
+moddedsave=r"..\saves\modsave.json"
+unmoddedsave=r"..\saves\save.json"
 
 if modding.modded:
     save=moddedsave

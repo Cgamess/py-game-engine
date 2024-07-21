@@ -12,7 +12,7 @@ import gzip
 testing=1
 
 
-files = json.loads(open(".\modfiles.json").read())
+files = json.loads(open("..\modfiles.json").read())
 moddata=[]
 tpmods=[]
 mods : list = os.listdir(r".\mods")

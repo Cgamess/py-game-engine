@@ -26,4 +26,4 @@ from PIL import Image
 import numpy as np
 import time
 import json
-from ntypes import open_file_dialog
+from ntypes.ntypes import open_file_dialog
