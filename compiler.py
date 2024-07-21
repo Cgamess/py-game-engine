@@ -28,5 +28,5 @@ import time
 import json
 from ntypes.ntypes import open_file_dialog
 import subprocess
-command=[r'.\pyinstaller.exe', r'--noconfirm', r'--onefile', r'--windowed', r'--name', r'"stuff"', r'--optimize', r'"2"', r'--add-data', r'"./myflag.png;."', r'--add-data', r'"./LICENSE.txt;."', r'--add-binary', r'"./binarys/opengl/SDL2.dll;."', r'--add-binary', r'"./binarys/basepython/python.exe;."', r'--add-binary', r'"./binarys/basepython/python3.dll;."', r'--add-binary', r'"./binarys/basepython/python312.dll;."',  r'"./runner.py"r']
+command=[r'.\pyinstaller.exe', r'--noconfirm', r'--onefile', r'--windowed', r'--name', r'stuff', r'--optimize', r'2', r'--add-data', r'.\myflag.png;.', r'--add-data', r'.\LICENSE.txt;.', r'--add-binary', r'.\binarys\opengl\SDL2.dll;.', r'--add-binary', r'.\binarys\basepython\python.exe;.', r'--add-binary', r'.\binarys\basepython\python3.dll;.', r'--add-binary', r'.\binarys\basepython\python312.dll;.',  r'.\runner.py']
 subprocess.run(command)
