@@ -30,14 +30,14 @@ from ntypes.ntypes import open_file_dialog
 from ntypes.calculations import calculate_width
 pygame.init()
 
-screen_width = 800
-screen_height = calculate_width((16,9),screen_width)
-flags = pygame.FULLSCREEN | pygame.HWSURFACE | pygame.DOUBLEBUF # | pygame.RESIZABLE
+info_object = pygame.display.Info()
+screen_width = info_object.current_w
+screen_height = info_object.current_h
+
+# screen_width = 800
+# screen_height = calculate_width((16,9),screen_width)
+flags = pygame.FULLSCREEN | pygame.HWSURFACE | pygame.DOUBLEBUF | pygame.RESIZABLE
 screen = pygame.display.set_mode((screen_width, screen_height), flags)
-
-res=1
-
-
 
 while True:
     pass

@@ -35,13 +35,6 @@ screen_height = 600
 flags = pygame.FULLSCREEN | pygame.HWSURFACE | pygame.DOUBLEBUF # | pygame.RESIZABLE
 screen = pygame.display.set_mode((screen_width, screen_height), flags)
 
-res=1
-
-aspect_ratios=[(4,3), (16,9)]
 
 while True:
-    match res:
-        case 1:
-            screen_height = 800
-            screen_dimensions=calculate_width(aspect_ratios[res-1], screen_height)
-            screen = pygame.display.set_mode(screen_dimensions, flags)
+    pass
