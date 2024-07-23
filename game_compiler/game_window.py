@@ -28,7 +28,7 @@ import time
 import json
 from ntypes.ntypes import open_file_dialog
 from ntypes.calculations import calculate_width
-from temp_files.settings import window
+from temp_files.windowsettings import window
 pygame.init()
 
 info_object = pygame.display.Info()
