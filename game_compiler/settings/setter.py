@@ -11,33 +11,36 @@ flags=[
     pygame.SHOWN,         # window is opened in visible mode (default)
     pygame.HIDDEN         # window is opened in hidden mode
 ]
-with open(os.path.join(".", "settings.json"), 'r') as data:
-    settings:dict = json.loads(data.read())
-    settings["flags"] = list(settings["flags"])
 
-checkflags = settings["flags"]
+def set_files():
 
-enabled=0
-for index, value in enumerate(checkflags):
-    # print(index, flags[index])
-    enabled |= flags[index] * value
+    with open(os.path.join(".", "settings.json"), 'r') as data:
+        settings:dict = json.loads(data.read())
+        settings["flags"] = list(settings["flags"])
+
+    checkflags = settings["flags"]
+
+    enabled=0
+    for index, value in enumerate(checkflags):
+        # print(index, flags[index])
+        enabled |= flags[index] * value
 
 
 
-path = os.path.join("..", "temp_files", "settings", "windowsettings.json")
+    path = os.path.join("..", "temp_files", "settings", "windowsettings.json")
 
-with open(path, "r+") as output:
+    with open(path, "r+") as output:
 
-    temp_json=json.loads(output.read())
+        temp_json=json.loads(output.read())
 
-    temp_json["flags"] = enabled.to_bytes((enabled.bit_length() + 7) // 8, 'little').hex()
+        temp_json["flags"] = enabled.to_bytes((enabled.bit_length() + 7) // 8, 'little').hex()
 
-    print(temp_json)
+        print(temp_json)
 
-    output.seek(0)
+        output.seek(0)
 
-    output.truncate()
+        output.truncate()
 
-    output.seek(0)
+        output.seek(0)
 
-    output.write(json.dumps(temp_json))
+        output.write(json.dumps(temp_json))

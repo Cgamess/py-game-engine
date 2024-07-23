@@ -1,13 +1,15 @@
 from jinja2 import Template
 import os, json # os for interplatform compatibility
 
-pytemplate=open(os.path.join(".", "windowtemplate.pytemp"))
+def prep_script():
 
-template=Template(pytemplate)
+    pytemplate=open(os.path.join(".", "windowtemplate.pytemp"))
 
-settings = json.loads(os.path.join(".", "windowsettings.json"))
+    template=Template(pytemplate)
 
-script=template.render(settings)
+    settings = json.loads(os.path.join(".", "windowsettings.json"))
 
-with open(os.path.join(".", "window.py"), "w") as windowpy:
-    windowpy.write(script)
+    script=template.render(settings)
+
+    with open(os.path.join(".", "window.py"), "w") as windowpy:
+        windowpy.write(script)
