@@ -12,6 +12,7 @@ flags=[
     pygame.HIDDEN         # window is opened in hidden mode
 ]
 
+dbg = 0
 
 def set_window_files():
 
@@ -34,7 +35,9 @@ def set_window_files():
 
         temp_json=json.loads(output.read())
 
-        temp_json["flags"] = enabled.to_bytes((enabled.bit_length() + 7) // 8, 'little').hex()
+        temp_json["flags"] = hex(enabled)
+
+        if dbg: print(hex(enabled))
 
         print(temp_json)
 

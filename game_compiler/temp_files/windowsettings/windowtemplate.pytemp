@@ -1,1 +1,1 @@
-flags = 0x{{ flags }}
+flags = {{ flags }}
