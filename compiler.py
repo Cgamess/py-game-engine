@@ -14,11 +14,11 @@ software and other kinds of works, specifically designed to ensure
 cooperation with the community in the case of network server software.
 
 The Rest in ./LICENCE
-https://github.com/Cgamess/ut-game-engine
+https://github.com/Cgamess/py-game-engine
 """ 
 if 0: print(licence) # assigned it to a var and put it in a print statement to keep it in the code after compilation
 import os
-os.environ[r'PYGAME_HIDE_SUPPORT_PROMPTr'] = r"ut-game-engine: https://github.com/Cgamess/ut-game-engine"+"\n"+licence
+os.environ[r'PYGAME_HIDE_SUPPORT_PROMPTr'] = r"ut-game-engine: https://github.com/Cgamess/py-game-engine"+"\n"+licence
 import pygame
 from OpenGL.GL import *
 from OpenGL.GL.shaders import compileProgram, compileShader
