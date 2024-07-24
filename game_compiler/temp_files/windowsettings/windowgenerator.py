@@ -3,13 +3,13 @@ import os, json # os for interplatform compatibility
 
 def prep_script():
 
-    pytemplate=open(os.path.join(".", "windowtemplate.pytemp"))
+    pytemplate=open(os.path.join(".", "temp_files", "windowsettings", "windowtemplate.pytemp"))
 
-    template=Template(pytemplate)
+    template=Template(pytemplate.read())
 
-    settings = json.loads(os.path.join(".", "windowsettings.json"))
+    settings = json.loads(open(os.path.join(".", "temp_files", "windowsettings", "windowsettings.json")).read())
 
     script=template.render(settings)
 
-    with open(os.path.join(".", "window.py"), "w") as windowpy:
+    with open(os.path.join(".", "temp_files", "windowsettings",  "window.py"), "w") as windowpy:
         windowpy.write(script)

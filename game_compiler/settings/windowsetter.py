@@ -12,9 +12,10 @@ flags=[
     pygame.HIDDEN         # window is opened in hidden mode
 ]
 
-def set_files():
 
-    with open(os.path.join(".", "settings.json"), 'r') as data:
+def set_window_files():
+
+    with open(os.path.join(".", "settings", "settings.json"), 'r') as data:
         settings:dict = json.loads(data.read())
         settings["flags"] = list(settings["flags"])
 
@@ -27,7 +28,7 @@ def set_files():
 
 
 
-    path = os.path.join("..", "temp_files", "settings", "windowsettings.json")
+    path = os.path.join(".", "temp_files", "windowsettings", "windowsettings.json")
 
     with open(path, "r+") as output:
 
