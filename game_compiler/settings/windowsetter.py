@@ -9,8 +9,22 @@ flags=[
     pygame.NOFRAME,       # display window will have no border or controls
     pygame.SCALED,        # resolution depends on desktop size and scale graphics
     pygame.SHOWN,         # window is opened in visible mode (default)
-    pygame.HIDDEN         # window is opened in hidden mode
+    pygame.HIDDEN,         # window is opened in hidden mode
+    pygame.HWACCEL
 ]
+
+mapping={
+pygame.FULLSCREEN:[1,1,1,1,0,0,1,1,1,1],
+pygame.DOUBLEBUF:[1,1,1,1,1,1,1,1,1,1],
+pygame.HWSURFACE:[1,1,1,1,1,1,1,1,1,1],
+pygame.OPENGL:[1,1,1,1,1,1,1,1,1,1],
+pygame.RESIZABLE:[0,1,1,1,1,1,1,1,1,1],
+pygame.NOFRAME:[0,1,1,1,1,1,1,1,1,1],
+pygame.SCALED:[1,1,1,1,1,1,1,1,1,1],
+pygame.SHOWN:[1,1,1,1,1,1,1,1,0,1],
+pygame.HIDDEN:[1,1,1,1,1,1,1,0,1,1],
+pygame.HWACCEL:[1,1,1,1,1,1,1,1,1,1]
+} # so i know what the mappings for flags is
 
 dbg = 0
 
